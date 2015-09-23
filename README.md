@@ -1,10 +1,10 @@
 # ELB Consul
 
-This Docker container allows you to (de)register EC2 instances belonging to a specific Consul service with an Amazon Elastic Load Balancer (ELB).
+This Docker image allows you to (de)register EC2 instances belonging to a specific Consul service with an Amazon Elastic Load Balancer (ELB).
 
 ## Usage
 
-The `elb-consul` container takes all of its configuration from environment variables.
+The `elb-consul` image takes all of its configuration from environment variables.
 
 * `AWS_ACCESS_KEY_ID` ... Your AWS [access key](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html)
 * `AWS_SECRET_ACCESS_KEY` ... Your AWS [secret key](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html)
