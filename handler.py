@@ -32,7 +32,7 @@ def aws(cmd):
             output = check_output('aws --region %s %s' % (AWS_REGION, cmd), shell=True)
             return json.loads(output)
         except CalledProcessError:
-            sleep(5)
+            time.sleep(5)
             continue
 
 
