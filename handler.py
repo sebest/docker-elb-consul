@@ -4,15 +4,13 @@ import os
 import sys
 import json
 import time
-import boto
+import boto.ec2.elb
 from subprocess import check_output, CalledProcessError
 
 AWS_REGION = os.environ['AWS_REGION']
 ELB_NAME = os.environ['ELB_NAME']
-AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
-AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 
-ELB = boto.ec2.elb.connect_to_region(aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY, region_name=AWS_REGION)
+ELB = boto.ec2.elb.connect_to_region(region_name=AWS_REGION)
 
 
 def elb_register(instances):
